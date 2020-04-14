@@ -1,3 +1,7 @@
 schema-version: 1.0
 name: aws
 
+var:
+    region: eu-west-3
+    type: t2.nano
+
