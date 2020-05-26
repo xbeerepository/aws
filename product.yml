@@ -2,6 +2,23 @@ schema-version: 1.0
 name: aws
 
 var:
-    region: eu-west-3
-    type: t2.nano
+  region: eu-west-3
+  type: t2.nano
+
+const:
+  alphabet: efghikjlmnop #used for device mapping. first volume is map to b, second to c ...
+  prefix: xv #used for device mapping -> /dev/xvd[x]
+
+
+provision:
+  - url:
+      from: https://s3.eu-west-3.amazonaws.com/xbee.io/providers/linux_amd64/aws/guest
+      to: /opt/piper
+      unpack: false
+      after: chmod u+x /opt/piper/guest
+  - shell: /opt/piper/guest provision {{ alphabet }} {{ prefix }}
+
+
+up: 
+  - shell: /opt/piper/guest mount {{ alphabet }} {{ prefix }}
 
