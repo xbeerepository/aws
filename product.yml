@@ -12,9 +12,8 @@ const:
 
 provision:
   - url:
-      from: https://s3.eu-west-3.amazonaws.com/xbee.io/providers/linux_amd64/guest
+      from: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/linux_amd64/guest
       to: /opt/piper
-      unpack: false
       after: chmod u+x /opt/piper/guest
   - shell: /opt/piper/guest provision {{ alphabet }} {{ prefix }}
 
