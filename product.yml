@@ -15,9 +15,9 @@ provision:
       from: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/linux_amd64/guest.tar.gz
       to: /opt/piper
       after: chmod u+x /opt/piper/guest
-  - shell: /opt/piper/guest provision {{ alphabet }} {{ prefix }}
+  - shell: /opt/piper/guest provision {% alphabet %} {% prefix %}
 
 
 up: 
-  - shell: /opt/piper/guest mount {{ alphabet }} {{ prefix }}
+  - shell: /opt/piper/guest mount {% alphabet %} {% prefix %}
 
