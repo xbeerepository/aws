@@ -3,6 +3,7 @@ schema-version: 1.0
 var:
   region: eu-west-3
   type: t2.nano
+  size: 20
 
 const:
   alphabet: efghikjlmnop #used for device mapping. first volume is map to b, second to c ...
