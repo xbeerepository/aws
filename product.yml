@@ -4,6 +4,7 @@ var:
   region: eu-west-3
   type: t2.nano
   size: 20
+  amis: #to be filled with system product
 
 const:
   alphabet: efghikjlmnop #used for device mapping. first volume is map to b, second to c ...
