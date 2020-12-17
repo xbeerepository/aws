@@ -6,19 +6,5 @@ var:
   size: 20
   amis: #to be filled with system product
 
-const:
-  alphabet: efghikjlmnop #used for device mapping. first volume is map to b, second to c ...
-  prefix: xv #used for device mapping -> /dev/xvd[x]
-
-
-provision:
-  - url:
-      from: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/linux_amd64/guest.tar.gz
-      to: /opt/piper
-      after: chmod u+x /opt/piper/guest
-  - shell: /opt/piper/guest provision {% alphabet %} {% prefix %}
-
-
-up: 
-  - shell: /opt/piper/guest mount {% alphabet %} {% prefix %}
-
+command:
+  execute: "{{ .piper.cache }}/s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .piper.os }}_{{ .piper.arch }}/aws"
