@@ -1,0 +1,4 @@
+labels:
+  os: linux
+execute: "{{ .xbee.cache }}/{% path %}/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbee.name %}"
+

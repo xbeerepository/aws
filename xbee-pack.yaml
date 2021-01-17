@@ -1,5 +1,7 @@
 schema-version: 1.0
 
+type: provider
+
 var:
   version: 
   region: eu-west-3
@@ -12,3 +14,5 @@ const:
 
 command:
   execute: "{{ .xbee.cache }}/s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbee.name %}"
+  hostdata: "{{ .templates }}/hostdata.sh"
+  
