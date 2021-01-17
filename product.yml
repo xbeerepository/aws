@@ -1,10 +1,14 @@
 schema-version: 1.0
 
 var:
+  version: 
   region: eu-west-3
   type: t2.nano
   size: 20
   amis: #to be filled with system product
 
+const:
+  path: s3.eu-west-3.amazonaws.com/xbee.repository/providers
+
 command:
-  execute: "{{ .piper.cache }}/s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .piper.os }}_{{ .piper.arch }}/aws"
+  execute: "{{ .xbee.cache }}/s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbee.name %}"
