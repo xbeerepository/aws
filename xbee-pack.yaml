@@ -13,6 +13,6 @@ const:
   path: s3.eu-west-3.amazonaws.com/xbee.repository/providers
 
 command:
-  execute: "{{ .xbee.cache }}/s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbee.name %}"
+  execute: "{{ .xbee.cache }}/s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbeeName %}"
   hostdata: "{{ .templates }}/hostdata.sh"
   
