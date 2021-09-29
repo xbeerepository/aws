@@ -2,15 +2,13 @@ schema-version: 1.0
 
 type: provider
 
+provider: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbeeName %}-{% version %}.tar.gz
+
 var:
-  version: 
   region: eu-west-3
   type: t2.nano
   size: 20
   amis: #to be filled with system product
-
-const:
-  path: s3.eu-west-3.amazonaws.com/xbee.repository/providers
 
 command:
   hostdata: "{{ .templates }}/hostdata.sh"
