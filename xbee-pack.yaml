@@ -6,9 +6,10 @@ provider: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.
 
 in:
   region:
-  availabilityzone:
+  availabilityZone:
   osarch:
-  type:
+  instanceType:
+  volumeType:
   size: 20
   amis: #to be filled with system product
 
