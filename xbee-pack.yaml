@@ -5,13 +5,14 @@ type: provider
 provider: https://s3.eu-west-3.amazonaws.com/xbee.repository/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{% xbeeName %}-{% xbeeVersion %}.tar.gz
 
 in:
-  region:
-  availabilityZone:
+  region: #should be set at host level
+  availabilityZone: #should be set at host level
   osarch:
-  instanceType:
-  volumeType:
+  instanceType: #should be set at host level
+  volumeType: #should be set at volume level
   size: 20
   amis: #to be filled with system product
+
 
 command:
   hostdata: "{{ .templates }}/hostdata.sh"
