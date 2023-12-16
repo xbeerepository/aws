@@ -2,7 +2,7 @@ schema-version: 1.0
 
 type: provider
 
-provider: https://s3.eu-west-3.amazonaws.com/xbee.repository.public/providers/{{ .xbee.os }}_{{ .xbee.arch }}/{{ .xbee.name }}.tar.gz
+provider: https://s3.eu-west-3.amazonaws.com/xbee.repository.public/{{ .xbee.os }}_{{ .xbee.arch }}/{{ .xbee.name }}.tar.gz
 
 in:
   region: #should be set at host level
