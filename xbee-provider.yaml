@@ -1,0 +1,31 @@
+schema-version: 1.0
+
+provider: https://s3.eu-west-3.amazonaws.com/xbee.repository.public/{{ .xbee.os }}_{{ .xbee.arch }}/{{ .xbee.name }}.gz
+
+#in:
+#  region: #should be set at host level
+#  availabilityZone: #should be set at host level
+#  osarch:
+#  instanceType: #should be set at host level
+#  volumeType: #should be set at volume level
+#  size: 20
+#  amis: #to be filled with system product
+
+system:
+  amis:
+
+host:
+  osarch:
+  region:
+  availabilityZone:
+  instanceType:
+  size:
+
+
+volume:
+  volumeType:
+  size:
+
+
+
+  
