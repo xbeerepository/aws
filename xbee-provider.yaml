@@ -15,7 +15,6 @@ system:
   amis:
 
 host:
-  osarch:
   region:
   availabilityZone:
   instanceType:
