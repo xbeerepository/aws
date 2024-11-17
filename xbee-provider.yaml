@@ -22,6 +22,7 @@ host:
 
 
 volume:
+  region:
   volumeType:
   size:
 
